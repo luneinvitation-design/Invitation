@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Иманбаева Үміткүл Дәнебайқызы — 40 күндік ас</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Mulish:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --beige-light:#F6EAD2;
+    --beige:#EFDDB8;
+    --beige-deep:#E4CA96;
+    --gold:#C9A24E;
+    --gold-deep:#A87F35;
+    --gold-bright:#DFB868;
+    --brown:#493A22;
+    --gold-a30: rgba(201,162,78,0.38);
+    --gold-a16: rgba(201,162,78,0.22);
+    --gold-a45: rgba(201,162,78,0.50);
+    --beige-light-a: rgba(246,234,210,0.6);
+    --beige-a: rgba(239,221,184,0.6);
+    --beige-deep-a: rgba(228,202,150,0.6);
+    --panel-bg: rgba(248,238,217,0.58);
+    --ease: cubic-bezier(.22,.61,.36,1);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--beige-light);
+    color:var(--brown);
+    font-family:'Mulish', sans-serif;
+    font-weight:300;
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+  }
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.001ms !important; transition-duration:0.001ms !important;}
+  }
+
+  h1,h2,h3,.serif{
+    font-family:'Playfair Display', serif;
+    font-weight:600;
+    letter-spacing:0.02em;
+    font-style:normal;
+  }
+  .eyebrow{
+    font-family:'Mulish', sans-serif;
+    letter-spacing:0.34em;
+    text-transform:uppercase;
+    font-size:12px;
+    color:var(--gold-deep);
+    font-weight:700;
+  }
+  .italic{ font-style:italic; font-weight:500; }
+  a{color:inherit;}
+
+  #feathers svg .flutter{
+    transform-box: fill-box;
+    transform-origin: 50% 52%;
+    animation: flutter 1.7s ease-in-out infinite alternate;
+  }
+  @keyframes flutter{
+    0%{ transform: rotate(-7deg); }
+    100%{ transform: rotate(7deg); }
+  }
+
+  /* ---------- ambient canvases ---------- */
+  #dust, #feathers{
+    position:fixed;
+    inset:0;
+    width:100%;
+    height:100%;
+    z-index:2;
+    pointer-events:none;
+  }
+  #dust{ mix-blend-mode:normal; }
+
+  .glow{
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+    background:
+      radial-gradient(ellipse 65% 45% at 50% 0%, var(--gold-a16), transparent 70%),
+      radial-gradient(ellipse 55% 55% at 10% 100%, rgba(201,162,78,0.12), transparent 70%);
+  }
+
+  section{
+    position:relative;
+    width:100%;
+    padding:min(14vw,150px) 8vw;
+    z-index:3;
+  }
+  section.panel-beige{ background:var(--panel-bg); }
+  section.panel-deep{ background:var(--panel-bg); }
+
+  .hairline{
+    width:74px;
+    height:2px;
+    background:linear-gradient(90deg, transparent, var(--gold), transparent);
+    margin:30px auto;
+    opacity:0.9;
+  }
+  .hairline.full{ width:100%; max-width:520px; }
+
+  /* ================= HERO ================= */
+  .hero{
+    min-height:100svh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:9vh 6vw;
+    background:
+      radial-gradient(ellipse 85% 70% at 50% 32%, var(--gold-a45), transparent 72%),
+      radial-gradient(ellipse 60% 50% at 15% 90%, var(--gold-a30), transparent 70%),
+      var(--panel-bg);
+    position:relative;
+  }
+  .hero-media-row{
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    flex-wrap:wrap;
+    gap:22px;
+    margin-bottom:34px;
+  }
+  .hero-media-row .ph{
+    width:min(40vw, 260px);
+  }
+  .hero-media-row .ph video{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+  }
+  .hero-topline{
+    position:absolute;
+    top:0; left:0; right:0;
+    height:3px;
+    background:linear-gradient(90deg, transparent, var(--gold) 30%, var(--gold-bright) 50%, var(--gold) 70%, transparent);
+    opacity:0.85;
+  }
+  .hero-photo{
+    aspect-ratio:4/5;
+  }
+  .hero .remember-tag{
+    margin-bottom:14px;
+  }
+  .hero .name{
+    font-size:clamp(29px, 5.2vw, 56px);
+    line-height:1.22;
+    max-width:15ch;
+    color:var(--brown);
+    letter-spacing:0.03em;
+    text-shadow:0 1px 18px rgba(201,162,78,0.22);
+  }
+  .hero .invite-line{
+    margin-top:36px;
+    font-family:'Playfair Display', serif;
+    font-weight:600;
+    font-size:clamp(19px, 2.8vw, 27px);
+    letter-spacing:0.16em;
+    color:var(--gold-deep);
+  }
+  .hero .dua{
+    margin-top:20px;
+    font-size:clamp(16px, 2vw, 22px);
+    font-style:italic;
+    font-weight:500;
+    color:var(--gold-deep);
+    letter-spacing:0.02em;
+  }
+  .hero .intro-text{
+    margin-top:30px;
+    max-width:58ch;
+    font-size:clamp(14px, 1.6vw, 16.5px);
+    line-height:2;
+    color:#5c4a2a;
+    font-weight:300;
+  }
+  .hero .date-loc{
+    margin-top:22px;
+    font-family:'Playfair Display', serif;
+    font-size:clamp(18px,2.4vw,24px);
+    color:var(--brown);
+    letter-spacing:0.02em;
+  }
+  .hero .date-loc small{
+    display:block;
+    font-family:'Mulish', sans-serif;
+    font-size:13px;
+    letter-spacing:0.04em;
+    color:#8a7245;
+    margin-top:8px;
+    font-weight:400;
+    line-height:1.7;
+  }
+
+  .scroll-hint{
+    position:absolute;
+    bottom:5vh;
+    left:50%;
+    transform:translateX(-50%);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:10px;
+    color:var(--gold-deep);
+    font-size:11px;
+    letter-spacing:0.24em;
+    text-transform:lowercase;
+  }
+  .scroll-hint svg{ animation:driftDown 2.2s var(--ease) infinite; }
+  @keyframes driftDown{
+    0%{ transform:translateY(0); opacity:0.25; }
+    50%{ transform:translateY(7px); opacity:0.9; }
+    100%{ transform:translateY(0); opacity:0.25; }
+  }
+
+  /* ================= reveal utility ================= */
+  .reveal{
+    opacity:0;
+    transform:translateY(30px) scale(0.985);
+    transition:opacity 1.4s var(--ease), transform 1.4s var(--ease);
+  }
+  .reveal.in{ opacity:1; transform:translateY(0) scale(1); }
+  .reveal-slow{ transition-duration:1.9s; }
+  .delay-1{ transition-delay:0.12s; }
+  .delay-2{ transition-delay:0.26s; }
+  .delay-3{ transition-delay:0.4s; }
+
+  /* ================= section titles ================= */
+  .section-head{ text-align:center; margin-bottom:min(7vw,70px); max-width:760px; margin-left:auto; margin-right:auto; }
+  .section-head h2{
+    font-size:clamp(26px,4vw,44px);
+    margin-top:14px;
+    letter-spacing:0.05em;
+    position:relative;
+  }
+  .section-head p{
+    margin-top:20px;
+    font-size:clamp(14.5px,1.6vw,16.5px);
+    line-height:2;
+    color:#5c4a2a;
+    font-weight:300;
+    letter-spacing:0.01em;
+  }
+  .section-head p.quote{
+    font-style:italic;
+    font-family:'Playfair Display', serif;
+    font-size:clamp(17px,2vw,21px);
+    color:var(--gold-deep);
+    font-weight:500;
+  }
+
+  /* ================= alternating photo/text blocks ================= */
+  .split{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:min(8vw,90px);
+    align-items:center;
+    max-width:1180px;
+    margin:0 auto;
+  }
+  .split.reverse .imgcol{ order:2; }
+  .split.reverse .txtcol{ order:1; }
+
+  .imgcol{ display:flex; flex-direction:column; gap:34px; }
+  .imgcol.stagger .ph:nth-child(1){ width:78%; aspect-ratio:4/5; align-self:flex-start; }
+  .imgcol.stagger .ph:nth-child(2){ width:52%; aspect-ratio:1/1; align-self:flex-end; }
+  .imgcol.stagger .ph:nth-child(3){ width:66%; aspect-ratio:5/4; align-self:flex-start; }
+
+  .ph{
+    position:relative;
+    border:1.5px solid var(--gold);
+    padding:7px;
+    background:var(--beige-light);
+    box-shadow:0 30px 60px -30px rgba(120,90,30,0.24);
+  }
+  .ph .inner{
+    position:relative;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    background:linear-gradient(155deg, var(--beige-deep), var(--beige-light) 60%);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .ph img{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+  }
+  .ph .placeholder-mark{ color:var(--gold-deep); opacity:0.5; }
+  .ph .placeholder-mark svg{ width:34%; height:34%; }
+  .ph .cap{
+    position:absolute;
+    left:0; right:0; bottom:0;
+    padding:8px 10px;
+    font-size:11px;
+    letter-spacing:0.04em;
+    color:var(--beige-light);
+    background:linear-gradient(0deg, rgba(73,58,34,0.6), transparent);
+    opacity:0;
+    transition:opacity 0.4s;
+  }
+  .ph:hover .cap{ opacity:1; }
+
+  .txtcol{ text-align:left; }
+  .txtcol .kicker{
+    font-family:'Playfair Display', serif;
+    font-style:italic;
+    font-weight:500;
+    font-size:18px;
+    color:var(--gold-deep);
+    margin-bottom:10px;
+  }
+  .txtcol h3{
+    font-size:clamp(24px,3.4vw,36px);
+    line-height:1.28;
+    letter-spacing:0.015em;
+    margin-bottom:22px;
+  }
+  .txtcol p{
+    font-size:15.5px;
+    line-height:2.05;
+    color:#5c4a2a;
+    max-width:46ch;
+    font-weight:300;
+    letter-spacing:0.005em;
+    margin-bottom:16px;
+  }
+  .txtcol p:last-child{ margin-bottom:0; }
+
+  /* ================= interactive photo presentation ================= */
+  .presentation-col{
+    width:100%;
+    max-width:440px;
+    margin:0 auto;
+  }
+  .pstack{
+    position:relative;
+    width:100%;
+    aspect-ratio:4/5;
+    cursor:pointer;
+    user-select:none;
+  }
+  .pcard{
+    position:absolute;
+    inset:0;
+    opacity:0;
+    transform:scale(0.965);
+    transition:opacity 0.9s var(--ease), transform 0.9s var(--ease);
+    pointer-events:none;
+  }
+  .pcard.active{
+    opacity:1;
+    transform:scale(1);
+    z-index:2;
+    pointer-events:auto;
+  }
+  .pcard .ph{ width:100%; height:100%; }
+  .pcard .ph .inner{ height:100%; }
+  .pcard .label{
+    position:absolute;
+    left:14px; bottom:14px;
+    padding:5px 14px;
+    background:rgba(73,58,34,0.55);
+    color:var(--beige-light);
+    font-size:11px;
+    letter-spacing:0.1em;
+    border-radius:2px;
+  }
+  .pdots{
+    display:flex;
+    gap:11px;
+    justify-content:center;
+    margin-top:22px;
+  }
+  .pdots .dot{
+    width:8px; height:8px;
+    border-radius:50%;
+    background:var(--beige-deep);
+    border:1px solid var(--gold);
+    cursor:pointer;
+    transition:background 0.3s, transform 0.3s;
+  }
+  .pdots .dot.active{ background:var(--gold); transform:scale(1.15); }
+  .phint{
+    margin-top:14px;
+    text-align:center;
+    font-size:11.5px;
+    letter-spacing:0.06em;
+    color:var(--gold-deep);
+    opacity:0.85;
+  }
+
+  /* ================= legacy / advice text-only section ================= */
+  .legacy{
+    text-align:center;
+    max-width:780px;
+    margin:0 auto;
+  }
+  .legacy p{
+    font-size:15.5px;
+    line-height:2.05;
+    color:#5c4a2a;
+    font-weight:300;
+    margin-bottom:20px;
+  }
+  .legacy p:last-child{ margin-bottom:0; }
+
+  /* ================= single emotional-pause photo ================= */
+  .pause{
+    min-height:100svh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    background:var(--panel-bg);
+    padding:8vh 6vw;
+  }
+  .pause .top-name{
+    font-family:'Playfair Display', serif;
+    font-size:clamp(20px,2.6vw,28px);
+    margin-bottom:32px;
+    text-align:center;
+    color:var(--brown);
+  }
+  .pause .ph{ width:min(50vw, 460px); aspect-ratio:4/5; }
+  .pause .caption{
+    margin-top:30px;
+    font-family:'Playfair Display', serif;
+    font-style:italic;
+    font-weight:500;
+    font-size:clamp(17px,2.1vw,22px);
+    color:var(--brown);
+  }
+
+  /* ================= gallery ================= */
+  .gallery-wrap{ position:relative; }
+  .gallery{
+    max-width:1300px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:repeat(6, 1fr);
+    grid-auto-rows:120px;
+    gap:22px;
+  }
+  .g1{ grid-column:span 3; grid-row:span 3; }
+  .g2{ grid-column:span 3; grid-row:span 2; }
+  .g3{ grid-column:span 2; grid-row:span 2; }
+  .g4{ grid-column:span 2; grid-row:span 3; }
+  .g5{ grid-column:span 2; grid-row:span 2; }
+  .g6{ grid-column:span 3; grid-row:span 2; }
+  .gallery .ph{ width:100%; height:100%; }
+  .gallery .ph .inner{ height:100%; }
+
+  /* ================= ceremony ornamental block ================= */
+  .ceremony-gold{
+    text-align:center;
+    background:
+      radial-gradient(ellipse 75% 75% at 50% 30%, var(--gold-a30), transparent 70%),
+      var(--panel-bg);
+    position:relative;
+  }
+  .ceremony-gold .frame{
+    max-width:680px;
+    margin:0 auto;
+    border:1.5px solid var(--gold);
+    padding:min(9vw,70px) min(7vw,60px);
+    position:relative;
+    background:rgba(246,234,210,0.65);
+  }
+  .ceremony-gold .frame::before,
+  .ceremony-gold .frame::after{
+    content:"";
+    position:absolute;
+    width:24px; height:24px;
+    border:1.5px solid var(--gold);
+  }
+  .ceremony-gold .frame::before{ top:-9px; left:-9px; border-right:none; border-bottom:none; }
+  .ceremony-gold .frame::after{ bottom:-9px; right:-9px; border-left:none; border-top:none; }
+  .ceremony-gold .orn{
+    width:36px; height:36px;
+    margin:0 auto 18px;
+    color:var(--gold);
+  }
+  .ceremony-gold h2{
+    font-size:clamp(26px,3.6vw,36px);
+    letter-spacing:0.06em;
+  }
+  .ceremony-gold .dl{
+    font-family:'Playfair Display', serif;
+    font-size:clamp(20px,2.6vw,26px);
+    margin:22px 0 6px;
+    color:var(--gold-deep);
+  }
+  .ceremony-gold .loc{
+    font-size:14px;
+    letter-spacing:0.03em;
+    color:#6b5632;
+    line-height:1.8;
+    margin-bottom:26px;
+  }
+  .ceremony-gold p.body{
+    max-width:50ch;
+    margin:0 auto 16px;
+    font-size:14.5px;
+    line-height:1.95;
+    color:#5c4a2a;
+  }
+  .ceremony-gold p.body:last-of-type{ margin-bottom:32px; }
+  .map-btn{
+    display:inline-block;
+    background:var(--gold);
+    color:var(--beige-light);
+    border:1.5px solid var(--gold);
+    padding:15px 42px;
+    border-radius:2px;
+    font-family:'Mulish', sans-serif;
+    font-weight:600;
+    font-size:13px;
+    letter-spacing:0.16em;
+    text-decoration:none;
+    transition:background 0.35s, color 0.35s, transform 0.35s;
+  }
+  .map-btn:hover{
+    background:transparent;
+    color:var(--gold-deep);
+    transform:translateY(-2px);
+  }
+
+  /* ================= final photo / closing ================= */
+  .closing{
+    min-height:100svh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    background:
+      radial-gradient(ellipse 65% 55% at 50% 32%, var(--gold-a30), transparent 70%),
+      var(--panel-bg);
+    padding:10vh 6vw;
+  }
+  .closing .ph{ width:min(66vw, 640px); aspect-ratio:3/2; margin-bottom:40px; }
+  .closing h2{
+    font-size:clamp(24px,3.6vw,38px);
+    letter-spacing:0.02em;
+  }
+  .closing .sub{
+    margin-top:26px;
+    max-width:48ch;
+    font-family:'Playfair Display', serif;
+    font-style:italic;
+    font-weight:500;
+    font-size:clamp(16px,2vw,20px);
+    color:#5c4a2a;
+    line-height:1.85;
+  }
+  .closing .final-blessing{
+    margin-top:26px;
+    font-family:'Playfair Display', serif;
+    font-size:clamp(18px,2.3vw,23px);
+    color:var(--gold-deep);
+    font-weight:600;
+  }
+
+  /* ================= music toggle — plain icon only ================= */
+  .music-btn{
+    position:fixed;
+    top:22px;
+    right:22px;
+    z-index:50;
+    width:46px;
+    height:46px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:rgba(246,234,210,0.9);
+    backdrop-filter:blur(6px);
+    border:1.5px solid var(--gold);
+    border-radius:50%;
+    cursor:pointer;
+    box-shadow:0 10px 30px -14px rgba(120,90,30,0.34);
+    color:var(--gold-deep);
+  }
+  .music-btn svg{ width:19px; height:19px; }
+  .music-btn .bar{ transition:opacity 0.2s; }
+  .music-btn:not(.playing) .bar-playing{ display:none; }
+  .music-btn.playing .bar-muted{ display:none; }
+
+  .dev-note{
+    position:relative;
+    z-index:3;
+    text-align:center;
+    padding:26px 6vw 44px;
+    font-size:11px;
+    color:#c9b483;
+    letter-spacing:0.03em;
+  }
+
+  @media (max-width: 860px){
+    .split{ grid-template-columns:1fr; gap:44px; }
+    .split.reverse .imgcol{ order:1; }
+    .split.reverse .txtcol{ order:2; }
+    .txtcol{ text-align:center; }
+    .txtcol p{ margin-left:auto; margin-right:auto; }
+    .imgcol.stagger .ph:nth-child(1){ width:80%; align-self:center; }
+    .imgcol.stagger .ph:nth-child(2){ width:56%; align-self:center; }
+    .imgcol.stagger .ph:nth-child(3){ width:68%; align-self:center; }
+    .gallery{ grid-template-columns:repeat(2,1fr); grid-auto-rows:160px; }
+    .g1,.g2,.g3,.g4,.g5,.g6{ grid-column:span 2; grid-row:span 2; }
+    .pause .ph{ width:78vw; }
+    .closing .ph{ width:88vw; }
+    section{ padding:20vw 7vw; }
+    .music-btn{ top:14px; right:14px; width:40px; height:40px; }
+    .hero-media-row{ flex-direction:column; align-items:center; }
+    .hero-media-row .ph{ width:min(62vw, 300px); }
+  }
+</style>
+</head>
+<body>
+
+<canvas id="dust"></canvas>
+<div id="feathers"></div>
+
+<!-- ===================== music toggle — plain icon button, no visible label ===================== -->
+<button class="music-btn" id="musicBtn" aria-label="Музыканы қосу/өшіру">
+  <svg viewBox="0 0 24 24" fill="none" class="bar bar-muted">
+    <path d="M9 18V6l10-2v12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="7" cy="18" r="2.4" stroke="currentColor" stroke-width="1.4"/>
+    <circle cx="17" cy="16" r="2.4" stroke="currentColor" stroke-width="1.4"/>
+  </svg>
+  <svg viewBox="0 0 24 24" fill="none" class="bar bar-playing">
+    <rect x="6" y="5" width="3.4" height="14" rx="1" fill="currentColor"/>
+    <rect x="14.6" y="5" width="3.4" height="14" rx="1" fill="currentColor"/>
+  </svg>
+</button>
+<!-- Track reference (kept out of the visible invitation on purpose): Ән 1 -->
+<audio id="bgAudio" src="song1.mp3" loop preload="auto" autoplay></audio>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <div class="hero-topline"></div>
+
+  <div class="hero-media-row reveal in">
+    <div class="ph hero-photo">
+      <div class="inner"><img src="01-babushka.jpg" alt="" onerror="this.style.display='none'"></div>
+    </div>
+    <div class="ph hero-photo">
+      <div class="inner">
+        <video autoplay muted loop playsinline>
+          <source src="video1.mp4" type="video/mp4">
+        </video>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="eyebrow remember-tag reveal in delay-1">Мәңгі есте сақтаймыз</div>
+  <h1 class="name reveal in delay-1">Иманбаева Үміткүл Дәнебайқызы</h1>
+  <div class="dua reveal in delay-2">Жаны жәннатта болсын</div>
+  <div class="hairline reveal in delay-2"></div>
+
+  <div class="invite-line reveal in delay-3">40 КҮНДІК АСҚА ШАҚЫРАМЫЗ</div>
+  <div class="date-loc reveal in delay-3">
+    20 ҚЫРКҮЙЕК
+    <small>Жамбыл облысы, Жамбыл ауданы<br>Өрнек ауылы (Крупская)</small>
+  </div>
+
+  <div class="scroll-hint">
+    <span>төмен қарай сырғытыңыз</span>
+    <svg width="14" height="22" viewBox="0 0 14 22" fill="none">
+      <path d="M7 1V21M7 21L1 15M7 21L13 15" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+</section>
+
+<!-- ===================== ӨМІРДЕН ӨШПЕС ЕСТЕЛІК — intro with more text ===================== -->
+<section class="panel-beige">
+  <div class="glow"></div>
+  <div class="section-head reveal">
+    <span class="eyebrow">Естелік</span>
+    <h2>ӨМІРДЕН ӨШПЕС ЕСТЕЛІК</h2>
+    <div class="hairline"></div>
+    <p>
+      Уақыт озып жатса да, жүрегімізде мәңгі сақталатын жандар болады.
+      Иманбаева Үміткүл Дәнебайқызы — біз үшін дәл сондай жан: мейірімі
+      мол, сөзі жылы, қолы ашық, көңілі кең әже, ана, дос еді. Осы шағын
+      беттің мақсаты — оның өмір жолын еске алу және сізді бірге дұға
+      етуге шақыру.
+    </p>
+    <p>
+      Ол 1940-жылдары дүниеге келіп, өмірінің көп бөлігін Жамбыл
+      облысындағы Өрнек ауылында өткізді. Қиын да қызықты жылдарды
+      бастан кешіп, отбасын аяқтан тұрғызды, балаларын тәрбиелеп,
+      немере-шөберелерінің қуанышын көрді. Оның өмір жолы — еңбек пен
+      мейірімнің, сабыр мен адалдықтың үлгісі.
+    </p>
+    <p class="quote">«Жақсы адамның есімі мен ісі ешқашан ұмытылмайды.»</p>
+  </div>
+</section>
+
+<!-- ===================== interactive photo presentation — click through 3 cards, warm words on the right ===================== -->
+<section>
+  <div class="split">
+    <div class="presentation-col reveal">
+      <div class="pstack" id="pstack">
+        <div class="pcard active" data-index="0">
+          <div class="ph"><div class="inner"><img src="02-babushka.jpg" alt="" onerror="this.style.display='none'"></div></div>
+          
+        </div>
+        <div class="pcard" data-index="1">
+          <div class="ph"><div class="inner"><img src="03-family.jpg" alt="" onerror="this.style.display='none'"></div></div>
+          
+        </div>
+        <div class="pcard" data-index="2">
+          <div class="ph"><div class="inner"><img src="04-family.jpg" alt="" onerror="this.style.display='none'"></div></div>
+          
+        </div>
+      </div>
+      <div class="pdots">
+        <span class="dot active" data-goto="0"></span>
+        <span class="dot" data-goto="1"></span>
+        <span class="dot" data-goto="2"></span>
+      </div>
+      <div class="phint">келесі суретті көру үшін басыңыз</div>
+    </div>
+    <div class="txtcol reveal delay-1">
+      <div class="kicker">Жүрек сөзі</div>
+      <h3>Еске алар сөздер</h3>
+      <p>
+        Әжеміздің мейірімі, ақ жүрегі мен жылы жүзі әрдайым жүрегімізде
+        сақталады. Біз үшін оның әрбір сөзі, әрбір ақылы, әрбір мейірімді
+        сәті — баға жетпес естелік.
+      </p>
+      <p>
+        Ол әрдайым бізге тыңдауды, сабыр сақтауды және кешірімді болуды
+        үйретті. Оның қолынан жасалған тағамның дәмі, дауысының үні,
+        көзқарасының жылуы — бәрі әлі күнге дейін есімізде.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== block 2 — text left, 3 photos right ===================== -->
+<section class="panel-beige">
+  <div class="split reverse">
+    <div class="txtcol reveal">
+      <div class="kicker">Естелік</div>
+      <h3>Отбасының жүрегі</h3>
+      <p>
+        Отбасының берекесін сақтап, әрқайсымызға мейірімін сыйлаған аяулы
+        жан еді. Оның жанында өткізген әрбір күніміз біз үшін қымбат.
+      </p>
+      <p>
+        Үйіміздің табалдырығын аттаған әрбір қонақ оның ыстық ықыласын
+        сезінетін. Ол ешкімді байсыз қалдырмайтын, әрдайым игі тілегін
+        айтатын. Осы қасиеті бүкіл әулетімізге өнеге болды.
+      </p>
+    </div>
+    <div class="imgcol stagger reveal delay-1">
+      <div class="ph"><div class="inner"><img src="05-babushka.jpg" alt="" onerror="this.style.display='none'"></div></div>
+      <div class="ph"><div class="inner"><img src="06-children.jpg" alt="" onerror="this.style.display='none'"></div></div>
+      <div class="ph"><div class="inner"><img src="07-grandchildren.jpg" alt="" onerror="this.style.display='none'"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== block 3 — 3 photos left, text right ===================== -->
+<section>
+  <div class="split">
+    <div class="imgcol stagger reveal">
+      <div class="ph"><div class="inner"><img src="08-family.jpg" alt="" onerror="this.style.display='none'"></div></div>
+      <div class="ph"><div class="inner"><img src="09-babushka.jpg" alt="" onerror="this.style.display='none'"></div></div>
+      <div class="ph"><div class="inner"><img src="10-family.jpg" alt="" onerror="this.style.display='none'"></div></div>
+    </div>
+    <div class="txtcol reveal delay-1">
+      <div class="kicker">Естелік</div>
+      <h3>Жылы естеліктер</h3>
+      <p>
+        Оның күлкісі, жылы сөзі, ақылы мен мейірімі біздің жадымызда мәңгі
+        қалады. Бірге өткізген әрбір сәтіміз жүрегіміздегі ең қымбат
+        естеліктердің бірі болып қала береді.
+      </p>
+      <p>
+        Мереке күндері дастарханының берекесі, ұзақ кештердегі әңгімесі,
+        ертегі мен өсиет сөздері — осының бәрі әулетіміздің жадында мәңгі
+        сақталады.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== block 4 — text left, 3 photos right ===================== -->
+<section class="panel-beige">
+  <div class="split reverse">
+    <div class="txtcol reveal">
+      <div class="kicker">Естелік</div>
+      <h3>Сағынышпен еске аламыз</h3>
+      <p>
+        Уақыт өткен сайын сағынышымыз тереңдей түседі. Бірақ оның жарқын
+        бейнесі, мейірімді жүзі мен жақсы сөздері біздің жүрегімізде
+        мәңгі сақталады.
+      </p>
+      <p>
+        Ол бізге қалдырған ең үлкен мұра — сабыр, мейірім және
+        отбасылық берекені бағалау. Осы қасиеттерді ұрпақтан-ұрпаққа
+        жеткізу — біздің парызымыз.
+      </p>
+    </div>
+    <div class="imgcol stagger reveal delay-1">
+      <div class="ph"><div class="inner"><img src="11-babushka.jpg" alt="" onerror="this.style.display='none'"></div></div>
+      <div class="ph"><div class="inner"><img src="12-family.jpg" alt="" onerror="this.style.display='none'"></div></div>
+      <div class="ph"><div class="inner"><img src="13-grandchildren.jpg" alt="" onerror="this.style.display='none'"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== legacy / advice text-only section ===================== -->
+<section>
+  <div class="legacy reveal">
+    <span class="eyebrow">Мұра</span>
+    <h2 style="margin:16px 0 28px;">Ұрпаққа қалған өсиет</h2>
+    <p>
+      Үміткүл әже үнемі: «Адамға жақсылық жаса, тілің мен қолың ашық
+      болсын, отбасыңды берекеден жаңылтпа» — деп айтатын. Осы қарапайым
+      да терең сөздер бүгінде әулетіміздің басты құндылығына айналды.
+    </p>
+    <p>
+      Біз оның есімін тек сағынышпен емес, алғыс сезіммен де еске
+      аламыз. Ол бізге өмір сүрудің, сабыр сақтаудың және сүюдің
+      нағыз мағынасын көрсетті.
+    </p>
+  </div>
+</section>
+
+<!-- ===================== full-screen emotional photo episode ===================== -->
+<section class="pause" style="padding-top:0; padding-bottom:0;">
+  <div class="top-name reveal">Иманбаева Үміткүл Дәнебайқызы</div>
+  <div class="ph reveal reveal-slow">
+    <div class="inner"><img src="14-memory.jpg" alt="" onerror="this.style.display='none'"></div>
+  </div>
+  <div class="caption reveal delay-2">Сағынышпен еске аламыз.</div>
+</section>
+
+<!-- ===================== family gallery ===================== -->
+<section class="gallery-wrap" id="gallerySection">
+  <div class="section-head reveal">
+    <span class="eyebrow">Отбасылық альбом</span>
+    <h2>Жылдар бойы сақталған сәттер</h2>
+    <p>
+      Мына беттердегі суреттер — оның ұзақ та мағыналы өмірінің
+      үзінділері: балаларымен, немерелерімен, туған-туыстарымен бөліскен
+      жанға жайлы сәттер.
+    </p>
+  </div>
+  <div class="gallery">
+    <div class="ph g1 reveal"><div class="inner"><img src="15-grandma.jpg" alt="" onerror="this.style.display='none'"></div></div>
+    <div class="ph g2 reveal delay-1"><div class="inner"><img src="16-grandchildren.jpg" alt="" onerror="this.style.display='none'"></div></div>
+    <div class="ph g3 reveal delay-2"><div class="inner"><img src="17-children.jpg" alt="" onerror="this.style.display='none'"></div></div>
+    <div class="ph g4 reveal"><div class="inner"><img src="18-family.jpg" alt="" onerror="this.style.display='none'"></div></div>
+    <div class="ph g5 reveal delay-1"><div class="inner"><img src="19-warm-moment.jpg" alt="" onerror="this.style.display='none'"></div></div>
+    <div class="ph g6 reveal delay-2"><div class="inner"><img src="20-special-day.jpg" alt="" onerror="this.style.display='none'"></div></div>
+  </div>
+</section>
+
+<!-- ===================== ceremony info + address button ===================== -->
+<section class="ceremony-gold">
+  <div class="frame reveal">
+    <svg class="orn" viewBox="0 0 40 40" fill="none">
+      <rect x="6" y="9" width="28" height="24" rx="1" stroke="currentColor" stroke-width="1.2"/>
+      <path d="M6 15H34" stroke="currentColor" stroke-width="1.2"/>
+      <path d="M13 5V12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+      <path d="M27 5V12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+      <circle cx="20" cy="24" r="3.2" stroke="currentColor" stroke-width="1.1"/>
+    </svg>
+    <h2>40 КҮНДІК АС</h2>
+    <div class="dl">20 ҚЫРКҮЙЕК</div>
+    <div class="loc">Жамбыл облысы, Жамбыл ауданы<br>Өрнек ауылы (Крупская)</div>
+    <p class="body">
+      Қимас жанымыздың өмірден өткеніне 40 күн толуына орай берілетін асқа
+      ағайын-туыс, құда-жекжат, дос-жаран, барша жақын жандарды Құран
+      бағыштап, дұғада болуға шақырамыз.
+    </p>
+    <p class="body">
+      Келуші қонақтарымызды жылы қабылдап, ортақ дұғамызға қосыламыз
+      деген үмітпен күтеміз. Сіздің қатысуыңыз біз үшін үлкен қолдау
+      әрі құрмет болмақ.
+    </p>
+    <a class="map-btn" href="https://2gis.kz/geo/70030076473187676" target="_blank" rel="noopener">МЕКЕНЖАЙДЫ КӨРУ</a>
+  </div>
+</section>
+
+<!-- ===================== final screen ===================== -->
+<section class="closing" id="closingSection">
+  <div class="ph reveal reveal-slow">
+    <div class="inner"><img src="21-final.jpg" alt="" onerror="this.style.display='none'"></div>
+  </div>
+  <h2 class="reveal delay-1">Сағынышпен еске аламыз</h2>
+  <p class="sub reveal delay-2">
+    Жарқын бейнеңіз жүрегімізде мәңгі сақталады. Сізді сағынышпен еске
+    алып, дұғамыздан тастамаймыз.
+  </p>
+  <div class="final-blessing reveal delay-2">Жаныңыз жәннатта болсын.</div>
+  <div class="hairline reveal delay-2"></div>
+</section>
+
+<div class="dev-note">© Отбасы естелігі — 20 қыркүйек</div>
+
+<script>
+  // ---------- inline SVG for photo placeholders ----------
+  document.querySelectorAll('.placeholder-mark').forEach(el=>{
+    el.innerHTML = '<svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">'+
+      '<path d="M30 10C30 10 20 22 20 32C20 38.6 24.5 44 30 44C35.5 44 40 38.6 40 32C40 22 30 10 30 10Z" stroke="currentColor" stroke-width="1.1"/>'+
+      '<path d="M30 44V52" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/>'+
+      '<path d="M22 50H38" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/>'+
+      '</svg>';
+  });
+
+  // ---------- scroll reveal ----------
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('in'); });
+  }, {threshold:0.16});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  // ================= gold dust particles =================
+  const canvas = document.getElementById('dust');
+  const ctx = canvas.getContext('2d');
+  let w,h,particles=[];
+  const galleryEl = document.getElementById('gallerySection');
+  const closingEl = document.getElementById('closingSection');
+
+  function resize(){ w = canvas.width = window.innerWidth; h = canvas.height = window.innerHeight; }
+  window.addEventListener('resize', resize);
+  resize();
+
+  function makeParticle(){
+    return {
+      x: Math.random()*w,
+      y: Math.random()*h,
+      r: Math.random()*1.6 + 0.9,
+      speedY: Math.random()*0.14 + 0.03,
+      drift: (Math.random()-0.5)*0.14,
+      alpha: Math.random()*0.5 + 0.22
+    };
+  }
+  const BASE_COUNT = 70;
+  const MAX_EXTRA = 40;
+  for(let i=0;i<BASE_COUNT;i++) particles.push(makeParticle());
+
+  // ---------- distinct golden "rain" streaks (thin falling gold lines, calm and slow) ----------
+  let rainDrops = [];
+  function makeRainDrop(){
+    return {
+      x: Math.random()*w,
+      y: Math.random()*h,
+      len: Math.random()*24 + 14,
+      speedY: Math.random()*0.5 + 0.28,
+      alpha: Math.random()*0.36 + 0.16,
+      width: Math.random()*0.8 + 0.5
+    };
+  }
+  const RAIN_COUNT = 60;
+  for(let i=0;i<RAIN_COUNT;i++) rainDrops.push(makeRainDrop());
+
+  let intensity = 0;
+  let closingFade = 1;
+  function updateIntensity(){
+    const rect = galleryEl.getBoundingClientRect();
+    const vh = window.innerHeight;
+    const center = rect.top + rect.height/2;
+    const dist = Math.abs(center - vh/2);
+    intensity = Math.max(0, 1 - dist/(vh*1.1));
+
+    const crect = closingEl.getBoundingClientRect();
+    const visibleRatio = Math.min(1, Math.max(0, (vh - crect.top) / (crect.height*0.9)));
+    closingFade = 1 - visibleRatio*0.85;
+  }
+
+  let extraParticles = [];
+  function syncExtras(){
+    const target = Math.floor(intensity * MAX_EXTRA);
+    while(extraParticles.length < target) extraParticles.push(makeParticle());
+    while(extraParticles.length > target) extraParticles.pop();
+  }
+
+  function draw(){
+    ctx.clearRect(0,0,w,h);
+    const all = particles.concat(extraParticles);
+    all.forEach(p=>{
+      p.y += p.speedY + intensity*0.12;
+      p.x += p.drift;
+      if(p.y > h+10){ p.y = -10; p.x = Math.random()*w; }
+      if(p.x > w+10) p.x = -10;
+      if(p.x < -10) p.x = w+10;
+
+      const a = p.alpha * closingFade;
+      ctx.beginPath();
+      ctx.fillStyle = `rgba(216,178,102,${a})`;
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI*2);
+      ctx.fill();
+    });
+
+    // draw the golden rain streaks — slow, thin, calm falling lines of light
+    rainDrops.forEach(d=>{
+      d.y += d.speedY + intensity*0.15;
+      if(d.y - d.len > h+10){ d.y = -10; d.x = Math.random()*w; }
+
+      const a = d.alpha * closingFade;
+      const grad = ctx.createLinearGradient(d.x, d.y - d.len, d.x, d.y);
+      grad.addColorStop(0, 'rgba(201,162,78,0)');
+      grad.addColorStop(0.55, `rgba(223,184,104,${a})`);
+      grad.addColorStop(1, 'rgba(201,162,78,0)');
+      ctx.strokeStyle = grad;
+      ctx.lineWidth = d.width;
+      ctx.beginPath();
+      ctx.moveTo(d.x, d.y - d.len);
+      ctx.lineTo(d.x, d.y);
+      ctx.stroke();
+    });
+
+    updateIntensity();
+    syncExtras();
+    requestAnimationFrame(draw);
+  }
+  requestAnimationFrame(draw);
+
+  // ================= interactive photo presentation (click to advance) =================
+  const pstack = document.getElementById('pstack');
+  if(pstack){
+    const pcards = Array.from(pstack.querySelectorAll('.pcard'));
+    const pdots = Array.from(document.querySelectorAll('.pdots .dot'));
+    let pIndex = 0;
+    function showPCard(i){
+      pIndex = i;
+      pcards.forEach((c,ci)=> c.classList.toggle('active', ci===pIndex));
+      pdots.forEach((d,di)=> d.classList.toggle('active', di===pIndex));
+    }
+    pstack.addEventListener('click', ()=>{
+      showPCard((pIndex+1) % pcards.length);
+    });
+    pdots.forEach(d=>{
+      d.addEventListener('click', (e)=>{
+        e.stopPropagation();
+        showPCard(parseInt(d.dataset.goto, 10));
+      });
+    });
+  }
+
+  // ================= falling white feathers, like autumn leaves — slow and graceful =================
+  const featherLayer = document.getElementById('feathers');
+
+  let featherId = 0;
+  function spawnFeather(){
+    const uid = 'ft'+(featherId++);
+    const el = document.createElementNS('http://www.w3.org/2000/svg','svg');
+    el.setAttribute('viewBox','0 0 40 90');
+    // much smaller, much more numerous feathers
+    const size = 9 + Math.random()*9;
+    el.setAttribute('width', size);
+    el.setAttribute('height', size*2.15);
+    el.innerHTML = `
+      <defs>
+        <filter id="glow-${uid}" x="-60%" y="-60%" width="220%" height="220%">
+          <feDropShadow dx="0" dy="0" stdDeviation="1.6" flood-color="#FFFFFF" flood-opacity="0.4"/>
+        </filter>
+      </defs>
+      <g class="flutter" style="animation-duration:${(1.3 + Math.random()*1.1).toFixed(2)}s; animation-delay:-${(Math.random()*2).toFixed(2)}s;">
+        <path d="M20 2C20 2 35 20 35 45C35 65 27 82 20 88C13 82 5 65 5 45C5 20 20 2 20 2Z"
+          fill="rgba(255,255,255,0.95)" stroke="rgba(255,255,255,0.6)" stroke-width="0.7" filter="url(#glow-${uid})"/>
+        <path d="M20 6V86" stroke="rgba(220,214,200,0.45)" stroke-width="0.7"/>
+        <path d="M20 14L9 22M20 14L31 22M20 26L8 35M20 26L32 35M20 38L9 47M20 38L31 47M20 50L10 58M20 50L30 58M20 62L11 69M20 62L29 69M20 73L13 79M20 73L27 79"
+          stroke="rgba(220,214,200,0.35)" stroke-width="0.55" stroke-linecap="round"/>
+      </g>
+    `;
+    el.style.position = 'absolute';
+    const startX = Math.random()*100;
+    el.style.left = startX+'vw';
+    el.style.top = '-100px';
+    el.style.opacity = '0';
+
+    featherLayer.appendChild(el);
+
+    // autumn-leaf style fall: slow, with a gentle side-to-side sway rather than a straight drift
+    const duration = 11000 + Math.random()*8000;
+    const swayWidth = 70 + Math.random()*110; // how wide the side-to-side sway is
+    const sway = (Math.random()>0.5 ? 1 : -1);
+    const rotateAmount = (Math.random()>0.5?1:-1) * (90 + Math.random()*130);
+    const endY = window.innerHeight + 160;
+
+    const anim = el.animate([
+      { transform:`translate(0px, 0px) rotate(0deg)`,                                                 opacity:0,   offset:0 },
+      { transform:`translate(${sway*swayWidth}px, ${endY*0.16}px) rotate(${rotateAmount*0.18}deg)`,    opacity:0.2, offset:0.14 },
+      { transform:`translate(${-sway*swayWidth*0.7}px, ${endY*0.36}px) rotate(${rotateAmount*0.4}deg)`, opacity:0.2, offset:0.36 },
+      { transform:`translate(${sway*swayWidth*0.85}px, ${endY*0.58}px) rotate(${rotateAmount*0.62}deg)`,opacity:0.2, offset:0.58 },
+      { transform:`translate(${-sway*swayWidth*0.5}px, ${endY*0.8}px) rotate(${rotateAmount*0.85}deg)`, opacity:0.2, offset:0.8 },
+      { transform:`translate(${sway*swayWidth*0.25}px, ${endY}px) rotate(${rotateAmount}deg)`,          opacity:0,   offset:1 }
+    ], { duration, easing:'ease-in-out', fill:'forwards' });
+
+    anim.onfinish = () => el.remove();
+  }
+
+  // continuous, dense "rain" of small, softly fluttering white feathers
+  function featherRainLoop(){
+    spawnFeather();
+    const nextIn = 90 + Math.random()*140; // frequent spawns = dense rain of small feathers
+    setTimeout(featherRainLoop, nextIn);
+  }
+  setTimeout(featherRainLoop, 200);
+
+  // ================= music: plain icon toggle, attempts autoplay immediately on entry =================
+  const audio = document.getElementById('bgAudio');
+  const musicBtn = document.getElementById('musicBtn');
+  let playing = false;
+
+  function setPlayingUI(state){
+    playing = state;
+    musicBtn.classList.toggle('playing', playing);
+  }
+
+  function attemptAutoplay(){
+    audio.volume = 1;
+    const p = audio.play();
+    if(p && p.then){
+      p.then(()=> setPlayingUI(true)).catch(()=>{
+        // Browsers block unmuted autoplay until the very first user interaction —
+        // this is a browser-level restriction, not something a site can override.
+        // As soon as any interaction happens, start playback immediately.
+        const startOnce = () => {
+          audio.play().then(()=> setPlayingUI(true)).catch(()=>{});
+          events.forEach(ev => window.removeEventListener(ev, startOnce));
+        };
+        const events = ['pointerdown','touchstart','touchend','keydown','scroll','wheel'];
+        events.forEach(ev => window.addEventListener(ev, startOnce, {once:true, passive:true}));
+      });
+    }
+  }
+  // try the instant the page is parsed, rather than waiting for every image/video to finish loading
+  attemptAutoplay();
+  document.addEventListener('DOMContentLoaded', attemptAutoplay);
+
+  musicBtn.addEventListener('click', ()=>{
+    if(!playing){
+      audio.play().then(()=> setPlayingUI(true)).catch(()=>{});
+    } else {
+      audio.pause();
+      setPlayingUI(false);
+    }
+  });
+
+  // fade music out gently as the closing section comes fully into view
+  const closingElForAudio = document.getElementById('closingSection');
+  setInterval(()=>{
+    if(!playing) return;
+    const crect = closingElForAudio.getBoundingClientRect();
+    const vh = window.innerHeight;
+    const visibleRatio = Math.min(1, Math.max(0, (vh - crect.top) / (crect.height*0.9)));
+    const targetVol = Math.max(0, 1 - visibleRatio*0.9);
+    audio.volume = targetVol;
+  }, 400);
+</script>
+
+</body>
+</html>
